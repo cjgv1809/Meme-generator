@@ -84,6 +84,8 @@ const CreatorScreen = ({ route, navigation }: Props) => {
       try {
         await MediaLibrary.saveToLibraryAsync(result);
         setShowModal(false);
+        setTop("");
+        setBottom("");
 
         toast.show({
           title: "Downloaded",

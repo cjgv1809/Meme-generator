@@ -2,6 +2,8 @@
 
 A meme generator app made with React native &amp; Expo, TS, RapidApi, NativeBase for styling, React navigation and expo-media-library to save the memes downloaded from the app
 
+## Screenshots taken from cellphone
+
 <img src="https://github.com/cjgv1809/Meme-generator/assets/57246901/942a2d0a-bd48-4f10-9964-06c15a0c0f99" width="250" height="500"/>
 
 <img src="https://github.com/cjgv1809/Meme-generator/assets/57246901/e1790a47-2613-458e-8da9-9675bd1340cf" width="250" height="500"/>

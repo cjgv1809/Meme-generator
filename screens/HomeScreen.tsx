@@ -39,7 +39,7 @@ const HomeScreen = ({ navigation }: Props) => {
   };
 
   return (
-    <ScrollView bgColor="coolGray.100">
+    <ScrollView bgColor="secondary.50" style={{ paddingBottom: 80 }}>
       {loading && (
         <Center w="100%" mt={8}>
           <VStack w="90%" space={4}>

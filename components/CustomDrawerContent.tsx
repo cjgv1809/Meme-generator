@@ -33,7 +33,7 @@ const CustomDrawerContent = ({ state, navigation, descriptors }: Props) => {
       }}
     >
       <Heading px={10} py={4} color="secondary.800">
-        Meme's App
+        MemeGen
       </Heading>
       <VStack my={4}>
         {state?.routeNames?.map((route: string, index: number) => (

@@ -11,7 +11,7 @@ import {
 
 const AboutScreen = () => {
   return (
-    <ScrollView p={6} flex={1}>
+    <ScrollView p={6} flex={1} bgColor="secondary.50">
       <View style={{ paddingBottom: 80 }}>
         <Heading color="gray.500">About the App</Heading>
         <Divider my={5} />

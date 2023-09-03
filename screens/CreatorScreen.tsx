@@ -114,7 +114,7 @@ const CreatorScreen = ({ route, navigation }: Props) => {
   };
 
   return (
-    <ScrollView>
+    <ScrollView bgColor="secondary.50" style={{ paddingBottom: 80 }}>
       <Modal isOpen={showModal} onClose={() => setShowModal(false)} size="lg">
         <Modal.Content maxWidth="400px">
           <Modal.CloseButton />

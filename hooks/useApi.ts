@@ -1,32 +1,31 @@
 import axios from "axios";
 import trending from "../assets/trending.json";
 import { memes } from "../assets/list";
+import { RAPID_API_KEY } from "@env";
 
 const useApi = () => {
   const getTrending = async (): Promise<TrendingMeme[]> => {
-    // try {
-    //   const response = await axios.get(
-    //     "https://reddit-meme.p.rapidapi.com/memes/trending",
-    //     {
-    //       headers: {
-    //         "X-RapidAPI-Key":
-    //           "dcb10b8065msh0c8f9866cdc13acp1c1021jsn368726b140c6",
-    //         "X-RapidAPI-Host": "reddit-meme.p.rapidapi.com",
-    //       },
-    //     }
-    //   );
-    //   console.log(response.data);
-    //   return response.data;
-    // } catch (error) {
-    //   console.log(error);
-    //   return Promise.reject(error);
-    // }
+    try {
+      const response = await axios.get(
+        "https://reddit-meme.p.rapidapi.com/memes/trending",
+        {
+          headers: {
+            "X-RapidAPI-Key": RAPID_API_KEY,
+            "X-RapidAPI-Host": "reddit-meme.p.rapidapi.com",
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      return Promise.reject(error);
+    }
 
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(trending);
-      }, 1000);
-    });
+    // return new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve(trending);
+    //   }, 1000);
+    // });
   };
 
   const getMemes = async (): Promise<Meme[]> => {
@@ -51,7 +50,7 @@ const useApi = () => {
     return axios.get("https://ronreiter-meme-generator.p.rapidapi.com/meme", {
       params: { top, bottom, meme },
       headers: {
-        "X-RapidAPI-Key": "dcb10b8065msh0c8f9866cdc13acp1c1021jsn368726b140c6",
+        "X-RapidAPI-Key": RAPID_API_KEY,
         "X-RapidAPI-Host": "ronreiter-meme-generator.p.rapidapi.com",
       },
       responseType: "blob",

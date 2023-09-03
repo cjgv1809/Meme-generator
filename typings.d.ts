@@ -8,3 +8,7 @@ interface Meme {
   name: string;
   image: ImageSourcePropType;
 }
+
+declare module "@env" {
+  export const RAPID_API_KEY: string;
+}

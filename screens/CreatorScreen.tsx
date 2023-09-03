@@ -98,6 +98,12 @@ const CreatorScreen = ({ route, navigation }: Props) => {
       }
     } else {
       console.error("Permission to access media library not granted");
+      toast.show({
+        title: "Error",
+        description: "Permission to access media library not granted",
+        placement: "bottom",
+        duration: 3000,
+      });
     }
   };
 

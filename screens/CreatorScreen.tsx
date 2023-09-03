@@ -95,6 +95,12 @@ const CreatorScreen = ({ route, navigation }: Props) => {
         });
       } catch (error) {
         console.error("Error saving meme to gallery:", error);
+        toast.show({
+          title: "Error",
+          description: "Error saving meme to gallery",
+          placement: "bottom",
+          duration: 3000,
+        });
       }
     } else {
       console.error("Permission to access media library not granted");
